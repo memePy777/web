@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MemePy | Solana AI Agent</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+	</head>
+	<body class="demo-1 loading">
+		<main>
+			<div class="message">Some message for mobile (if needed).</div>
+			<div class="frame">
+				<div class="frame__title-wrap">
+				</div>
+				<div style="width: 400px" class="frame__links">
+					<a style="color: #fff; cursor: pointer; border: 1px solid #fff; border-radius: 5px; padding: 5px 20px;" target="_blank" href="https://pump.fun/coin/BQAYLMx6oK6qrdfHRY7mRqJ2aeTphU5F8ZNo4qjPpump">Pump</a>
+					<a style="color: #fff; cursor: pointer; border: 1px solid #fff; border-radius: 5px; padding: 5px 20px;" target="_blank" href="https://x.com/memepy777">X</a>
+					<a style="color: #fff; cursor: pointer; border: 1px solid #fff; border-radius: 5px; padding: 5px 20px;" target="_blank" href="https://github.com/memePy777/MemePy-AI-Agent">GitHub</a>
+					<a style="color: grey; cursor: pointer; border: 1px solid grey; border-radius: 5px; padding: 5px 20px;" title="Will be available soon">App</a>
+				</div>
+			</div>
+			<div class="content">
+				<div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+				<div style="position: absolute; z-index: 10000; bottom: 10vh; color: white; font-size: 22px; border: 1px solid white; border-radius: 15px; padding: 10px 25px; background: #ffffff47;">
+					CA: BQAYLMx6oK6qrdfHRY7mRqJ2aeTphU5F8ZNo4qjPpump
+				</div>
+			</div>
+		</main>
+
+		<script src="js/libs/imagesLoaded.pkgd.min.js"></script>
+		<script src="js/libs/pixi.min.js"></script>
+		<script src="js/libs/pixi-filters.min.js"></script>
+		<script src="js/libs/TweenMax.min.js"></script>
+		<script src="js/rgbKineticSlider.js"></script>
+		<script>
+            
+            // images setup
+			const images = [
+			    "img/bcg-2.jpg",
+			];
+            
+            // content setup
+			const texts = [
+			    ["MemePy AI Agent", "Blending the fun of memes with smart Solana blockchain interactions."],
+			]
+
+			rgbKineticSlider = new rgbKineticSlider({
+
+			    slideImages: images, // array of images > must be 1920 x 1080
+			    itemsTitles: texts, // array of titles / subtitles
+
+			    backgroundDisplacementSprite: 'img/map-9.jpg', // slide displacement image 
+			    cursorDisplacementSprite: 'img/displace-circle.png', // cursor displacement image
+
+			    cursorImgEffect : true, // enable cursor effect
+			    cursorTextEffect : false, // enable cursor text effect
+			    cursorScaleIntensity : 0.65, // cursor effect intensity
+			    cursorMomentum : 0.14, // lower is slower
+
+			    swipe: true, // enable swipe
+			    swipeDistance : window.innerWidth * 0.4, // swipe distance - ex : 580
+			    swipeScaleIntensity: 2, // scale intensity during swipping
+
+			    slideTransitionDuration : 1, // transition duration
+			    transitionScaleIntensity : 30, // scale intensity during transition
+			    transitionScaleAmplitude : 160, // scale amplitude during transition
+
+			    nav: true, // enable navigation
+			    navElement: '.main-nav', // set nav class
+			    
+			    imagesRgbEffect : false, // enable img rgb effect
+			    imagesRgbIntensity : 0.9, // set img rgb intensity
+			    navImagesRgbIntensity : 80, // set img rgb intensity for regular nav 
+
+			    textsDisplay : true, // show title
+			    textsSubTitleDisplay : true, // show subtitles
+			    textsTiltEffect : true, // enable text tilt
+			    googleFonts : ['Playfair Display:700', 'Roboto:400'], // select google font to use
+			    buttonMode : false, // enable button mode for title
+			    textsRgbEffect : true, // enable text rgb effect
+			    textsRgbIntensity : 0.03, // set text rgb intensity
+			    navTextsRgbIntensity : 15, // set text rgb intensity for regular nav
+
+			    textTitleColor : 'white', // title color
+			    textTitleSize : 60, // title size
+			    mobileTextTitleSize : 60, // title size
+			    textTitleLetterspacing : 3, // title letterspacing
+
+			    textSubTitleColor : 'white', // subtitle color ex : 0x000000
+			    textSubTitleSize : 21, // subtitle size
+			    mobileTextSubTitleSize : 21, // mobile subtitle size
+			    textSubTitleLetterspacing : 2, // subtitle letter spacing
+			    textSubTitleOffsetTop : 90, // subtitle offset top
+			    mobileTextSubTitleOffsetTop : 90, // mobile subtitle offset top
+			});
+		</script>
+	</body>
+</html>
